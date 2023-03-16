@@ -1,0 +1,72 @@
+import java.util.*;
+public class 19_1 {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		bool filled;
+		System.out.println("Enter 3 side lengths of the triangle");
+		double a = input.nextDouble(), b = input.nextDouble, c = input.nextDouble; 
+		System.out.println("Enter the color of the triangle");
+		String color = input.nextString(); 
+		System.out.println("Is the triangle filled? y/n");
+		if (input.nextChar() == 'y') {
+			filled = true;	
+		}
+		else if (input.nextChar() == 'n') {
+			filled = false
+		}
+		
+		else {
+			System.out.println("recompile program"); 
+		}
+	}
+}
+
+public Class Triangle {
+	private double a;
+	private double b;
+	private double c;
+	private double p;
+	
+	private String color;
+
+	private bool filled;
+
+	public void Triangle(double a, double b, double c, String color, bool filled) {
+		this.a = a;
+		this.b = b;
+		this.c = c;
+		
+		p = a + b + c;
+		this.color = color;
+		this.filled = filled;
+	}
+
+	public double getArea{
+		///implements heron's formula 
+		double s = p/2; 
+		return Math.sqrt(s*(s-a)*(s-b)*(s-c))
+	}
+
+	public double getPerimeter() {
+		return p;
+	}
+
+	public bool isFilled() {
+		return filled;
+	}
+	
+	public String getColor() {
+		return color;
+	}
+
+}
+
+public abstract class GeometricObject {
+	
+	public void GeometricObject() {
+
+	}
+}
+
+
